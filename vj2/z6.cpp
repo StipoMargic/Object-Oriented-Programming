@@ -12,7 +12,7 @@ typedef struct vector
 
 vector newVector()
 {
-  vector* Vector = new vector();
+  vector *Vector = new vector();
 
   Vector->arr = (int *)malloc(sizeof(int) * Vector->init);
 
@@ -27,7 +27,7 @@ int vectorSize(vector &Vector)
 void vectorDelete(vector &Vector)
 {
   free(Vector.arr);
-  delete &Vector;
+  delete Vector;
 }
 
 int vectorFront(vector &Vector)
@@ -40,9 +40,16 @@ int vectorBack(vector &Vector)
   return Vector.arr[Vector.logicalSize];
 }
 
-int vectorPop(vector &Vector)
+void vectorPop(vector &Vector)
 {
-  return Vector.arr[Vector.logicalSize--];
+  int *arr = (int *)malloc(sizeof(int) * Vector.logicalSize);
+
+  for (int i = 0; i < Vector.logicalSize - 1; i++)
+    arr[i] = Vector.arr[i];
+  free(Vector.arr);
+
+  Vector.logicalSize--;
+  Vector.arr = arr;
 }
 
 void vectorPush(vector &Vector, int n)
@@ -63,7 +70,6 @@ int main()
   v1 = newVector();
 
   // v1.logicalSize = 2;
-
 
   vectorPush(v1, 1);
   int n = vectorSize(v1);
