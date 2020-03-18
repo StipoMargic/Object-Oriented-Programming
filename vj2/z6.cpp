@@ -13,12 +13,13 @@ typedef struct vector
 vector newVector()
 {
   vector Vector;
+  
   Vector.arr = (int *)malloc(sizeof(int) * Vector.init);
 
   return Vector;
 }
 
-int vectorSize(vector Vector)
+int vectorSize(vector &Vector)
 {
   return Vector.logicalSize;
 }
@@ -40,16 +41,17 @@ int vectorBack(vector &Vector)
 
 int vectorPop(vector &Vector)
 {
-  int last = Vector.arr[Vector.logicalSize];
-  Vector.logicalSize--;
-  return last;
+  return Vector.arr[Vector.logicalSize--];
 }
 
 void vectorPush(vector &Vector, int n)
 {
+  if (Vector.psychicalSize == Vector.logicalSize)
+  {
+    Vector.init = Vector.init * 2;
+    Vector.arr = (int *)realloc(Vector.arr, sizeof(int) * Vector.init);
+  }
 
-  Vector.init = Vector.init * 2;
-  Vector.arr = (int *)realloc(Vector.arr, sizeof(int) * Vector.init);
   Vector.arr[Vector.logicalSize] = n;
   Vector.logicalSize++;
 }
@@ -71,5 +73,9 @@ int main()
 
   int e = vectorFront(v1);
   cout << e << endl;
+
+  int p = vectorPop(v1);
+  cout << p << endl;
+
   return 0;
 }
