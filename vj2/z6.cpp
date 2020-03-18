@@ -40,9 +40,11 @@ int vectorBack(vector &Vector)
   return Vector.arr[Vector.logicalSize];
 }
 
-void vectorPop(vector &Vector)
+int vectorPop(vector &Vector)
 {
   int *arr = (int *)malloc(sizeof(int) * Vector.logicalSize);
+
+  int pop = Vector.arr[Vector.logicalSize];
 
   for (int i = 0; i < Vector.logicalSize - 1; i++)
     arr[i] = Vector.arr[i];
@@ -50,6 +52,8 @@ void vectorPop(vector &Vector)
 
   Vector.logicalSize--;
   Vector.arr = arr;
+
+  return pop;
 }
 
 void vectorPush(vector &Vector, int n)
