@@ -12,11 +12,11 @@ typedef struct vector
 
 vector newVector()
 {
-  vector Vector;
-  
-  Vector.arr = (int *)malloc(sizeof(int) * Vector.init);
+  vector* Vector = new vector();
 
-  return Vector;
+  Vector->arr = (int *)malloc(sizeof(int) * Vector->init);
+
+  return *Vector;
 }
 
 int vectorSize(vector &Vector)
@@ -27,6 +27,7 @@ int vectorSize(vector &Vector)
 void vectorDelete(vector &Vector)
 {
   free(Vector.arr);
+  delete &Vector;
 }
 
 int vectorFront(vector &Vector)
