@@ -1,25 +1,55 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <cctype>
 
 using namespace std;
 
 string reverseString(string sentence)
 {
-  reverse(sentence.begin(), sentence.end() - 1);
+  vector<string> sVector;
+  string newString;
+  int track = 0;
 
-  sentence[0] = toupper(sentence[0]);
-  sentence[sentence.length() - 2] = tolower(sentence[sentence.length() - 2]);
+  for (int i = 0; i < sentence.length() - 1; i++)
+  {
+    if (sentence[i] != ' ')
+    {
+      newString = newString + sentence[i];
+    }
+    else
+    {
+      sVector.push_back(newString);
+      newString = "";
+    }
+  }
+  sVector.push_back(newString);
 
-  return sentence;
+  reverse(sVector.begin(), sVector.end());
+
+  string revStr;
+  for (auto i : sVector)
+  {
+    revStr += i;
+    revStr += " ";
+  }
+  int len = revStr.length();
+  revStr[0] = toupper(revStr[0]);
+  revStr[len - 2] = tolower(revStr[len - 2]);
+  revStr[len - 1] = '.';
+
+  return revStr;
 }
+
 int main()
 {
-  cout << "Enter string: ";
-  string sentence = "";
+  // cout << "Enter string: ";
+  // string sentence = "";
 
-  getline(cin, sentence);
+  // getline(cin, sentence);
 
-  string reversed = reverseString(sentence);
+  string reversed = reverseString("I love you.");
 
   cout << reversed;
 
