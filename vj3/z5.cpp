@@ -6,11 +6,12 @@ using namespace std;
 
 bool isVowel(char ch) { return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'); }
 
-void pigLatin(string orgString)
+string pigLatin(string orgString)
 {
+  string res;
   string newStr;
   vector<string> newVec;
-  for (int i = 0; i < orgString.length() - 1; i++)
+  for (int i = 0; i < orgString.length(); i++)
   {
     if (orgString[i] != ' ')
     {
@@ -26,7 +27,6 @@ void pigLatin(string orgString)
 
   for (int i = 0; i < newVec.size(); i++)
   {
-    int len = newVec[i].length();
     if (isVowel(tolower(newVec[i][0])))
     {
       newVec[i].push_back('h');
@@ -35,21 +35,19 @@ void pigLatin(string orgString)
     }
     else
     {
-      char tmp = newVec[i][len];
-      newVec[i][len] = newVec[i][0];
-      newVec[i][0] = tmp;
+      newVec[i].push_back(newVec[i][0]);
+      newVec[i].push_back('a');
+      newVec[i].push_back('y');
+      newVec[i].erase(0, 1);
     }
   }
-
   for (int i = 0; i < newVec.size(); i++)
   {
-    int len = newVec[i].length();
-    for (int j = 0; j < len; j++)
-    {
-      cout << newVec[i][j];
-    }
-    cout << " " << endl;
+    res += newVec[i];
+    res += ' ';
   }
+
+  return res;
 }
 
 int main()
@@ -72,7 +70,8 @@ int main()
   cin >> randomNum;
   string realString = strVec[randomNum - 1];
 
-  pigLatin(realString);
+  string res = pigLatin(realString);
+  cout << res;
 
   return 0;
 }
