@@ -1,6 +1,7 @@
 #include "Headers.h"
 
-Player::Player(string name, int points){
+Player::Player(string name, int points)
+{
   this->name = name;
   this->points = points;
 }
@@ -12,7 +13,7 @@ void Player::akuza(vector<Card> hand)
   int arr[]{1, 2, 3};
   int array[3][4] = {{0, 0, 0, 0}, {0, 0, 0, 0}, {0, 0, 0, 0}};
 
-  while (!x)
+  while (x != 0)
   {
     char temp = type[y];
     for (int i = 0; i < 10; i++)
@@ -44,7 +45,7 @@ void Player::akuza(vector<Card> hand)
     }
   }
   int counter = 0;
-  
+
   for (int i = 0; i < 3; i++)
   {
     counter = 0;
@@ -56,16 +57,13 @@ void Player::akuza(vector<Card> hand)
       counter++;
     if (array[i][3] == 1)
       counter++;
-    if (counter == 3)
+    if (counter == 4)
     {
-      if (counter == 4)
-      {
-        numbOfPoints += 4;
-      }
-      else
-      {
-        numbOfPoints += 3;
-      }
+      numbOfPoints += 4;
+    }
+    else
+    {
+      numbOfPoints += 3;
     }
   }
   points = numbOfPoints;
