@@ -61,7 +61,7 @@ void Player::akuza(vector<Card> hand)
     {
       numbOfPoints += 4;
     }
-    else
+    if (counter == 3)
     {
       numbOfPoints += 3;
     }

@@ -16,6 +16,16 @@ public:
     Card(int numb, char type);
 
     virtual ~Card();
+
+    int getNumb() const;
+
+    void setNumb(int numb);
+
+    char getType() const;
+
+    void setType(char type);
 };
+
+
 
 #endif //CARD_HPP

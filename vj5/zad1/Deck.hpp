@@ -23,6 +23,14 @@ public:
     vector <Card> getCards();
     void printDeck();
 
+    int getCurCard() const;
+
+    void setCurCard(int curCard);
+
+    void setCards(const vector <Card> &cards);
+
 };
+
+
 
 #endif //DECK_HPP

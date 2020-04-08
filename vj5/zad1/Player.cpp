@@ -4,6 +4,29 @@
 
 #include <iostream>
 #include "Player.hpp"
+const string &Player::getName() const {
+    return name;
+}
+
+void Player::setName(const string &name) {
+    Player::name = name;
+}
+
+int Player::getPoints() const {
+    return points;
+}
+
+void Player::setPoints(int points) {
+    Player::points = points;
+}
+
+const vector<Card> &Player::getCards() const {
+    return cards;
+}
+
+void Player::setCards(const vector<Card> &cards) {
+    Player::cards = cards;
+}
 
 Player::Player(string &name, int points) {
     this->name = name;

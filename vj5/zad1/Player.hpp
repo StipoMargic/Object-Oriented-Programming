@@ -23,5 +23,20 @@ public:
     Player(string &name, int points);
     void akuza(vector<Card>);
     void printHand();
+
+    const string &getName() const;
+
+    void setName(const string &name);
+
+    int getPoints() const;
+
+    void setPoints(int points);
+
+    const vector<Card> &getCards() const;
+
+    void setCards(const vector<Card> &cards);
 };
+
+
+
 #endif //PLAYER_HPP

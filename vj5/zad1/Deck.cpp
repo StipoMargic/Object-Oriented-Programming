@@ -4,7 +4,17 @@
 
 #include <iostream>
 #include "Deck.hpp"
+int Deck::getCurCard() const {
+    return curCard;
+}
 
+void Deck::setCurCard(int curCard) {
+    Deck::curCard = curCard;
+}
+
+void Deck::setCards(const vector <Card> &cards) {
+    Deck::cards = cards;
+}
 Deck::Deck() {
     cout << "Deck Constructor" << endl;
     int i = 0, j = 0, k = 1;
