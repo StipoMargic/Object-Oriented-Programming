@@ -1,0 +1,10 @@
+- Remove Getters and Setters = No need [x]
+- Default Constructor = 10 rows 20 columns [x]
+- Correct Point coords: [x]
+        - X = Column
+        - Y = Row
+- Check are coords good values[x]
+- Cast double to ints [x]
+- Draw vertical lines [x]
+- Draw diagonal lines [x]
+- Draw horizontal lines [x]

@@ -4,13 +4,12 @@
 using namespace std;
 
 int main() {
-    Point p1(2,3);
-    Point p2(4,5);
+    Point p1(2,2), p2(8,8), p3(8,2), p4(8,16);
+    Board b(10,20, 'o');
 
-    Board b(20,10, '*');
-    b.DrawChar(p1, 'x');
-    b.DrawLineUp(p1);
-    b.DrawLine(p1,p2);
+    b.DrawLine(p1, p2, '0');
+    b.DrawLine(p3, p4, 'x');
+
     b.Display();
 
     return 0;

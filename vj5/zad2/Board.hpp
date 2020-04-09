@@ -22,11 +22,14 @@ public:
     int **A;
 
     Board(int height, int width, char symbolToDraw);
+    Board();
 
     virtual ~Board();
 
 public:
     void Display();
+
+    bool IsValidCoords(Point point);
 
     void DrawChar(Point p, char symbolToDraw = 'x');
 
@@ -34,17 +37,9 @@ public:
 
     void DrawLine(Point p1, Point p2, char symbolToDraw = 'x');
 
-    int getHeight() const;
+    void DrawHorizontal(Point p1, Point p2, char symbolToDraw = 'x');
 
-    void setHeight(int height);
-
-    int getWidth() const;
-
-    void setWidth(int width);
-
-    int getSymbolToDraw() const;
-
-    void setSymbolToDraw(int symbolToDraw);
+    void DrawVertical(Point point, Point point1, char symbol);
 };
 
 #endif //ZAD2_BOARD_HPP
