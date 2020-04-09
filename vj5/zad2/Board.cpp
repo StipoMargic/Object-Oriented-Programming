@@ -74,7 +74,7 @@ void Board::Display() {
 }
 
 
-void Board::DrawChar(Point p, char symbolToDraw) {
+void Board::DrawChar(const Point p, char symbolToDraw) {
     if (IsValidCoords(p)) {
         for (int i = 0; i < Board::height; i++) {
             for (int j = 0; j < Board::width; j++)
@@ -87,7 +87,7 @@ void Board::DrawChar(Point p, char symbolToDraw) {
     }
 }
 
-void Board::DrawLineUp(Point p, char symbolToDraw) {
+void Board::DrawLineUp(const Point p, char symbolToDraw) {
     for (int i = 1; i <= int(p.x); i++) {
         for (int j = 1; j <= (p.y); j++)
             if (j == int(p.y)) {
@@ -96,7 +96,7 @@ void Board::DrawLineUp(Point p, char symbolToDraw) {
     }
 }
 
-void Board::DrawLine(Point p1, Point p2, char symbol) {
+void Board::DrawLine(const Point p1, const Point p2, char symbol) {
     if (p1.x == p2.x) {
         DrawHorizontal(p1, p2, symbol);
     } else {
@@ -104,7 +104,7 @@ void Board::DrawLine(Point p1, Point p2, char symbol) {
     }
 }
 
-bool Board::IsValidCoords(Point point) {
+bool Board::IsValidCoords(const Point point) {
     if (point.y >= height || point.y <= 0) {
         cout << "Y Coord is not valid! Try Again!" << endl;
         return false;
@@ -114,13 +114,13 @@ bool Board::IsValidCoords(Point point) {
     return true;
 }
 
-void Board::DrawHorizontal(Point p1, Point p2, char symbol) {
+void Board::DrawHorizontal(const Point p1, const Point p2, char symbol) {
     int i = p1.x;
     for (int j = int(p1.y); j < int(p2.y); j++)
         A[i][j] = int(symbol);
 }
 
-void Board::DrawVertical(Point p1, Point p2, char symbol) {
+void Board::DrawVertical(const Point p1, const Point p2, char symbol) {
     for (int i = int(p1.x); i <= int(p2.x); i++) {
         for (int j = int(p1.y); j < int(p2.y); j++)
             if (i == j) {

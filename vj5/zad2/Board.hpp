@@ -31,15 +31,15 @@ public:
 
     bool IsValidCoords(Point point);
 
-    void DrawChar(Point p, char symbolToDraw = 'x');
+    void DrawChar(const Point p, char symbolToDraw = 'x');
 
-    void DrawLineUp(Point p, char symbolToDraw = 'x');
+    void DrawLineUp(const Point p, char symbolToDraw = 'x');
 
-    void DrawLine(Point p1, Point p2, char symbolToDraw = 'x');
+    void DrawLine(const Point p1, const Point p2, char symbolToDraw = 'x');
 
-    void DrawHorizontal(Point p1, Point p2, char symbolToDraw = 'x');
+    void DrawHorizontal(const Point p1, const Point p2, char symbolToDraw = 'x');
 
-    void DrawVertical(Point point, Point point1, char symbol);
+    void DrawVertical(const Point point,const  Point point1, char symbol);
 };
 
 #endif //ZAD2_BOARD_HPP
