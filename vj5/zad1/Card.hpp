@@ -5,27 +5,27 @@
 #ifndef CARD_HPP
 #define CARD_HPP
 
-using namespace std;
+#include <iostream>
 
-class Card
-{
-public:
-    int numb;
-    char type;
+class Card {
+ public:
+  Card() : Card(1, 'B') {}
 
-    Card(int numb, char type);
+  Card(int numb, char type) : mNumb(numb), mType(type) {}
 
-    virtual ~Card();
+  ~Card() { std::cout << "Destructor called" << std::endl; }
 
-    int getNumb() const;
+  inline int getNumb() { return mNumb; }
 
-    void setNumb(int numb);
+  inline void setNumb(int numb) { mNumb = numb; }
 
-    char getType() const;
+  inline char getType() { return mType; }
 
-    void setType(char type);
+  inline void setType(char type) { mType = type; }
+
+ private:
+  int mNumb;
+  char mType;
 };
-
-
 
 #endif //CARD_HPP

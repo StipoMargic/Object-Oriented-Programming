@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(zad1
-        Card.cpp
         Card.hpp
         Deck.cpp
         Deck.hpp

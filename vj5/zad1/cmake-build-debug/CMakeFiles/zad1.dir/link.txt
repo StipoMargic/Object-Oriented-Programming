@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/zad1.dir/Deck.cpp.o CMakeFiles/zad1.dir/Headers.cpp.o CMakeFiles/zad1.dir/main.cpp.o CMakeFiles/zad1.dir/Player.cpp.o  -o zad1 

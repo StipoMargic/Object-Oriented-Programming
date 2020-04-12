@@ -9,34 +9,33 @@
 #include <string>
 #include <vector>
 
-
 using namespace std;
 
 class Player {
-public:
-    string name;
-    int points;
-    vector<Card> cards;
+ public:
 
-    virtual ~Player();
+  Player(string &name, int points) : mName(name), mPoints(points) {}
 
-    Player(string &name, int points);
-    void akuza(vector<Card>);
-    void printHand();
+  ~Player();
+  void akuza(vector<Card>);
+  void printHand();
 
-    const string &getName() const;
+  inline string &getName() { return mName;}
 
-    void setName(const string &name);
+  inline void setName(const string &name) { mName = name; };
 
-    int getPoints() const;
+  inline int getPoints() { return mPoints; }
 
-    void setPoints(int points);
+  inline void setPoints(int points) { mPoints = points; }
 
-    const vector<Card> &getCards() const;
+  inline vector<Card> &getCards() { return mCards; }
 
-    void setCards(const vector<Card> &cards);
+  inline void setCards(const vector<Card> &cards) { mCards = cards; }
+
+ private:
+  string mName;
+  int mPoints;
+  vector<Card> mCards;
 };
-
-
 
 #endif //PLAYER_HPP

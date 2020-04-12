@@ -9,28 +9,25 @@
 #include <vector>
 
 class Deck {
-    int curCard = 0;
+  int mCurCard = 0;
+  Card getCard();
+  std::vector<Card> mCards;
 
-    Card getCard();
+ public:
+  Deck();
 
-    vector <Card> cards;
+  ~Deck() { std::cout << "Deck destructor" << std::endl; }
 
-public:
-    Deck();
-    virtual ~Deck();
+  void shuffle();
+  std::vector<Card> getCards();
+  void printDeck();
 
-    void shuffle();
-    vector <Card> getCards();
-    void printDeck();
+  inline int getCurCard() { return mCurCard; }
 
-    int getCurCard() const;
+  inline void setCurCard(int curCard) { mCurCard = curCard; }
 
-    void setCurCard(int curCard);
-
-    void setCards(const vector <Card> &cards);
+  inline void setCards(const std::vector<Card> &cards) { mCards = cards; }
 
 };
-
-
 
 #endif //DECK_HPP

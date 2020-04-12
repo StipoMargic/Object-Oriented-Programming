@@ -16,9 +16,9 @@ void result(int numberOfPlayers) {
 
         auto *Gamer = new Player(name, 0);
 
-        Gamer->cards = newDeck.getCards();
-        Gamer->akuza(Gamer->cards);
-        cout << Gamer->name << " have: " << Gamer->points << "points." << endl;
+        Gamer->setCards(newDeck.getCards());
+        Gamer->akuza(Gamer->getCards());
+        cout << Gamer->getName() << " have: " << Gamer->getPoints() << "points." << endl;
 
         Gamer->printHand();
 
