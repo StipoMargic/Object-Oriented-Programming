@@ -8,38 +8,33 @@
 #include <vector>
 
 typedef struct Point {
-    double x;
-    double y;
+  double mX;
+  double mY;
 
-    Point(double x, double y);
+  Point(double x, double y) : mX(x), mY(y) {}
 } Point;
 
 class Board {
-public:
-    int height;
-    int width;
-    char symbolToDraw;
-    int **A;
+ public:
+  Board(int height, int width, char symbolToDraw);
+  Board();
 
-    Board(int height, int width, char symbolToDraw);
-    Board();
+  ~Board() { delete[] mA; }
 
-    virtual ~Board();
+  void Display();
+  void DrawChar(const Point &p, char symbolToDraw = 'x');
+  void DrawLineUp(const Point &p, char symbolToDraw = 'x');
+  void DrawLine(const Point &p1, const Point &p2, char symbolToDraw = 'x');
+  void DrawHorizontal(const Point &p1, const Point &p2, char symbolToDraw = 'x');
+  void DrawVertical(const Point &point, const Point &point1, char symbol);
+ private:
+ public:
+  int mHeight;
+  int mWidth;
+  char mSymbolToDraw;
+  int **mA;
+  bool IsValidCoords(const Point &point) const;
 
-public:
-    void Display();
-
-    bool IsValidCoords(Point point);
-
-    void DrawChar(const Point p, char symbolToDraw = 'x');
-
-    void DrawLineUp(const Point p, char symbolToDraw = 'x');
-
-    void DrawLine(const Point p1, const Point p2, char symbolToDraw = 'x');
-
-    void DrawHorizontal(const Point p1, const Point p2, char symbolToDraw = 'x');
-
-    void DrawVertical(const Point point,const  Point point1, char symbol);
 };
 
 #endif //ZAD2_BOARD_HPP
