@@ -14,20 +14,20 @@ Board::Board() {
   this->mSymbolToDraw = '*';
 
   // dynamically create array of pointers of size Height
-  mA = new int *[mHeight];
+  mA = new char *[mHeight];
 
   // dynamically allocate memory of size width for each row
   for (int i = 0; i < mHeight; i++)
-    mA[i] = new int[mWidth];
+    mA[i] = new char[mWidth];
 
   // assign values to allocated memory
   for (int i = 0; i < mHeight; i++) {
 
     for (int j = 0; j < mWidth; j++) {
       if ((i == 0) || (i == mHeight - 1) || (j == 0) || (j == mWidth - 1)) {
-        mA[i][j] = int(mSymbolToDraw);
+        mA[i][j] = mSymbolToDraw;
       } else {
-        mA[i][j] = 32;
+        mA[i][j] = ' ';
       }
     }
   }
@@ -39,30 +39,30 @@ Board::Board(int height, int width, char symbolToDraw) {
   this->mWidth = width;
   this->mSymbolToDraw = symbolToDraw;
 
-  // dynamically create array of pointers of size Height
-  mA = new int *[height];
+	// dynamically create array of pointers of size Height
+	mA = new char *[mHeight];
 
-  // dynamically allocate memory of size width for each row
-  for (int i = 0; i < height; i++)
-    mA[i] = new int[width];
+	// dynamically allocate memory of size width for each row
+	for (int i = 0; i < mHeight; i++)
+		mA[i] = new char[mWidth];
 
-  // assign values to allocated memory
-  for (int i = 0; i < height; i++) {
+	// assign values to allocated memory
+	for (int i = 0; i < mHeight; i++) {
 
-    for (int j = 0; j < width; j++) {
-      if ((i == 0) || (i == height - 1) || (j == 0) || (j == width - 1)) {
-        mA[i][j] = int(symbolToDraw);
-      } else {
-        mA[i][j] = 32;
-      }
-    }
-  }
+		for (int j = 0; j < mWidth; j++) {
+			if ((i == 0) || (i == mHeight - 1) || (j == 0) || (j == mWidth - 1)) {
+				mA[i][j] = mSymbolToDraw;
+			} else {
+				mA[i][j] = ' ';
+			}
+		}
+	}
 }
 
 void Board::Display() {
   for (int i = 0; i < Board::mHeight; i++) {
     for (int j = 0; j < Board::mWidth; j++)
-      cout << char(mA[i][j]) << " ";
+      cout << mA[i][j] << " ";
 
     cout << endl;
   }
@@ -73,7 +73,7 @@ void Board::DrawChar(const Point &p, char symbolToDraw) {
     for (int i = 0; i < Board::mHeight; i++) {
       for (int j = 0; j < Board::mWidth; j++)
         if (i == p.mX && j == p.mY) {
-          mA[i][j] = int(symbolToDraw);
+          mA[i][j] = symbolToDraw;
         }
     }
   } else {
@@ -108,7 +108,7 @@ void Board::DrawVertical(const Point &p1, const Point &p2, char symbol) {
   for (int i = int(p1.mX); i <= int(p2.mX); i++) {
     for (int j = int(p1.mY); j < int(p2.mY); j++)
       if (i == j) {
-        mA[i][j] = int(symbol);
+        mA[i][j] = symbol;
       }
   }
 }
@@ -121,4 +121,11 @@ bool Board::IsValidCoords(const Point &point) const {
     return false;
   }
   return true;
+}
+Board::Board(const Board& otherBoard)
+{
+	mA = otherBoard.mA;
+	mWidth = otherBoard.mWidth;
+	mHeight = otherBoard.mHeight;
+	mSymbolToDraw = otherBoard.mSymbolToDraw;
 }

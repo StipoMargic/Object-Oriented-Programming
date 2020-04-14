@@ -18,6 +18,7 @@ class Board {
  public:
   Board(int height, int width, char symbolToDraw);
   Board();
+  Board(const Board& otherBoard);
 
   ~Board() { delete[] mA; }
 
@@ -32,7 +33,7 @@ class Board {
   int mHeight;
   int mWidth;
   char mSymbolToDraw;
-  int **mA;
+  char **mA;
   bool IsValidCoords(const Point &point) const;
 
 };
