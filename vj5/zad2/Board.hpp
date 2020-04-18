@@ -24,7 +24,7 @@ class Board {
 
   void Display();
   void DrawChar(const Point &p, char symbolToDraw = 'x');
-  void DrawLineUp(const Point &p, char symbolToDraw = 'x');
+  void DrawLineUp(const Point& p1, const Point& p2, char symbol);
   void DrawLine(const Point &p1, const Point &p2, char symbolToDraw = 'x');
   void DrawHorizontal(const Point &p1, const Point &p2, char symbolToDraw = 'x');
   void DrawVertical(const Point &point, const Point &point1, char symbol);
