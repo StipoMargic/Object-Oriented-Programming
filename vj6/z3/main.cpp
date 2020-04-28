@@ -7,11 +7,10 @@ int main()
 {
 	Game g;
 
-	g.PlayGame();
-
-	while (Player::WantToPlayAgain())
+	do
 	{
 		g.PlayGame();
-	}
+	} while (Player::WantToPlayAgain());
+
 	return 0;
 }
