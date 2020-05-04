@@ -5,44 +5,45 @@
 #include "Library.hpp"
 #include <iostream>
 
-std::vector<std::string> Library::GetBookByTitle(std::string title)
+std::vector<std::string> Library::GetBookByAuthorName(const std::string& authorName) const
 {
 	std::vector<std::string> AllBooks;
-	for (int i = 0; i < mEBooks.size(); ++i)
+
+	for (auto i = mBooks.begin(); i != mBooks.end(); ++i)
 	{
-		int found = mEBooks[i].mTitle.find(title);
-		if (found != std::string::npos)
+		if ((*i)->GetAuthor() == authorName)
 		{
-			AllBooks.push_back(mEBooks[i].mTitle);
+			AllBooks.push_back((*i)->GetTitle());
 		}
 	}
 
 	return AllBooks;
 }
 
-std::vector<std::string> Library::GetBookByAuthorName(std::string authorName)
+std::vector<Book*> Library::GetBooksByTitle(const std::string& title) const
 {
-	std::vector<std::string> AllBooks;
-	for (int i = 0; i < mEBooks.size(); ++i)
+	std::vector<Book*> AllBooks;
+
+	for (auto i = mBooks.begin(); i != mBooks.end(); ++i)
 	{
-		if (mEBooks[i].mAuthor == authorName)
+		if ((*i)->GetTitle().find(title) == -1)
 		{
-			AllBooks.push_back(mEBooks[i].mTitle);
+			AllBooks.push_back((*i));
 		}
 	}
 
 	return AllBooks;
 }
 
-int Library::GetTotalSize(std::string authorName)
+float Library::GetTotalSize(const std::string& authorName)
 {
-	int size = 0;
-	for (int i = 0; i < mEBooks.size(); ++i)
+	float totalSize = 0;
+	for (auto i = mBooks.begin(); i != mBooks.end(); ++i)
 	{
-		if (mEBooks[i].mAuthor == authorName)
+		if ((*i)->GetAuthor() == authorName)
 		{
-			size += mEBooks[i].mSize;
+			totalSize += (*i)->GetSize();
 		}
 	}
-	return size;
+	return totalSize;
 }

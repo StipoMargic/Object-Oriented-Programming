@@ -5,29 +5,35 @@ using namespace std;
 int main()
 {
 	Library library;
-	EBook book1, book2, book3;
-	book1.mAuthor = "Ivo";
-	book1.mTitle = "Another";
-	book1.mSize = 10;
-	library.mEBooks.push_back(book1);
-	book2.mAuthor = "Ivo02";
-	book2.mTitle = "Test";
-	book2.mSize = 10;
-	library.mEBooks.push_back(book2);
-	book3.mAuthor = "Ivo";
-	book3.mTitle = "Test 3w";
-	book3.mSize = 10;
-	library.mEBooks.push_back(book3);
+	vector<Book*> AllBooks;
 
-	vector<string> booksByAuthor = library.GetBookByAuthorName("Ivo");
-	vector<string> booksByTitle = library.GetBookByTitle("Test");
-	int total = library.GetTotalSize("Ivo");
+	EBook eBook1("Shin Takahashi",
+		"Iroha Inoue; The Manga Guide to Linear Algebram", 2005,
+		" No_Starch_The_Manga_Guide_to_Linear_Algebra.pdf",
+		34.6);
 
-	cout << total << endl;
+	EBook eBook2("Allen Holub",
+		"Enough Rope to Shoot Yourself in the Foot",
+		2005,
+		"Enough_Rope_to_Shoot_Yourself_in_the_Foot.pdf",
+		11);
 
-	for (int i = 0; i < booksByTitle.size(); ++i)
-	{
-		cout << booksByTitle[i] << endl;
-	}
+	HardCopyBook hardCopyBook1("Aldous Huxley", "Island", 2010, 336);
+	HardCopyBook hardCopyBook2("Neal Stephenson", "Cryptonomicon", 199, 918);
+
+	Book* book1 = &eBook1;
+	Book* book2 = &eBook2;
+	Book* book3 = &hardCopyBook1;
+	Book* book4 = &hardCopyBook2;
+
+	AllBooks.push_back(book1);
+	AllBooks.push_back(book2);
+	AllBooks.push_back(book3);
+	AllBooks.push_back(book4);
+
+	library.SetBooks(AllBooks);
+
+	float size = library.GetTotalSize("Allen Holub");
+	cout << size;
 }
 
