@@ -4,28 +4,49 @@
 
 #include "Game.hpp"
 #include <iostream>
+#include "HumanPlayer.hpp"
+#include "ComputerPlayer.hpp"
 
 void Game::PlayGame()
 {
-	Player p1, p2;
+	HumanPlayer humanPlayer;
+	std::string hName = humanPlayer.PlayerName();
+	int hFingers = humanPlayer.SetNumberOfFingers();
 
-	p1 = p1.SetUpComputer();
-	p2 = p2.SetUpPlayer();
+	humanPlayer.SetFingers(hFingers);
+	humanPlayer.SetName(hName);
 
-	DisplayResult(p1, p2);
+	ComputerPlayer computerPlayer;
+	std::string cName = computerPlayer.PlayerName();
+	int cFingers = computerPlayer.SetNumberOfFingers();
+	computerPlayer.SetFingers(cFingers);
+	computerPlayer.SetName(cName);
+
+	DisplayResult(humanPlayer, computerPlayer);
 }
 
-void Game::DisplayResult(Player player1, Player player2)
+void Game::DisplayResult(HumanPlayer player1, ComputerPlayer player2)
 {
-	int total = player2.mNumberOfFingers + player1.mNumberOfFingers;
+	int total = player2.GetFingers() + player1.GetFingers();
 	int decision = total % 2;
 
-	if (decision == 0 && player1.mDecision == "Even" || decision == 1 && player1.mDecision == "Odd")
+	bool evenOrOdd = true;
+
+	for (int i = 0; i < rand() % 500; ++i)
+	{
+		evenOrOdd = !evenOrOdd;
+	}
+
+	std::cout << evenOrOdd << "\t";
+	std::cout << player1.GetFingers() << "\t";
+	std::cout << player2.GetFingers() << "\t";
+
+	if (decision == 0 && !evenOrOdd || decision == 1 && evenOrOdd)
 	{
 		std::cout << "Computer won" << std::endl;
 	}
 	else
 	{
-		std::cout << player2.mPlayerName << " won!" << std::endl;
+		std::cout << player1.GetName() << " won!" << std::endl;
 	}
 }

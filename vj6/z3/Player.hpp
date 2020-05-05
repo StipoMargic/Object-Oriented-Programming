@@ -9,14 +9,9 @@
 class Player
 {
  public:
-	std::string mPlayerName;
-	std::string mDecision;
-	unsigned int mNumberOfFingers;
-
-	Player SetUpComputer() const;
-	Player SetUpPlayer() const;
+	virtual std::string PlayerName() = 0;
+	virtual int SetNumberOfFingers() = 0;
 	static bool WantToPlayAgain();
-
 };
 
 #endif //Z2__PLAYER_HPP_
