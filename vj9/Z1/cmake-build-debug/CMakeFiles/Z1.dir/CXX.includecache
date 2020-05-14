@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Z1/Sort.hpp
+algorithm
+-
+
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Z1/main.cpp
+iostream
+-
+Sort.hpp
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Z1/Sort.hpp
+

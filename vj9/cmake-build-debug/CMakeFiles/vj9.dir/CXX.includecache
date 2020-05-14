@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Stack.cpp
+Stack.hpp
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Stack.hpp
+iostream
+-
+
+/home/stipo/Projects/stipomargic-vjezbe/vj9/Stack.hpp
+

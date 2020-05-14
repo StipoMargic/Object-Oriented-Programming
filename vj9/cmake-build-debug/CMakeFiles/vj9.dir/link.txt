@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/vj9.dir/main.cpp.o CMakeFiles/vj9.dir/Stack.cpp.o  -o vj9 
