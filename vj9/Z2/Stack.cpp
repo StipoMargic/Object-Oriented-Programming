@@ -17,7 +17,10 @@ void Stack<T>::push(T value)
 template<class T>
 T Stack<T>::pop()
 {
-	return mPtr[mCurrent--];
+	if(mCurrent == -1)
+		std::cout << "Stack is empty" << std::endl;
+	else
+		return mPtr[mCurrent--];
 }
 
 template<class T>

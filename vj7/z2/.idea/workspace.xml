@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1898f642-1820-405d-b829-7c20cd13ba85" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/Book.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/EBook.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/HardCopyBook.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/Library.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/Library.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z1/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z2/Game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z2/Game.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z2/Player.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z2/Player.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/ComputerPlayer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/ComputerPlayer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/Game.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/Game.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/HumanPlayer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/HumanPlayer.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/Player.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/Player.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../vj6/z3/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Money.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Money.hpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1bgGEIOorYFgN0UijU4lBAJxLl7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1898f642-1820-405d-b829-7c20cd13ba85" name="Default Changelist" comment="" />
+      <created>1589046209352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589046209352</updated>
+      <workItem from="1589046210631" duration="2778000" />
+      <workItem from="1589197123295" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1920" height="269" key="GridCell.Tab.0.bottom" timestamp="1589050590159">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1920" height="269" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1589050590159" />
+    <state width="1920" height="269" key="GridCell.Tab.0.center" timestamp="1589050590159">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1920" height="269" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1589050590159" />
+    <state width="1920" height="269" key="GridCell.Tab.0.left" timestamp="1589050590159">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1920" height="269" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1589050590159" />
+    <state width="1920" height="269" key="GridCell.Tab.0.right" timestamp="1589050590159">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1920" height="269" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1589050590159" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1589046230372">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1589046230372" />
+  </component>
+</project>

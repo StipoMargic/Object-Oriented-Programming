@@ -47,3 +47,13 @@ std::ostream& operator<<(std::ostream& consoleOut, const Money& money)
 	std::cout << "Bill is " << money.mKn << " kuna and " << money.mLp << " lipa." << std::endl;
 	return consoleOut;
 }
+
+Money::operator double() const
+{
+	return GetPrice();
+}
+
+double Money::GetPrice() const
+{
+	return mKn + (mLp / 100);
+}

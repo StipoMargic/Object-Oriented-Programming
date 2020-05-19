@@ -14,7 +14,7 @@ class Money
 
 	}
 
-	Money(int kn, int lp) : mKn(kn), mLp(lp)
+	Money(double kn, double lp) : mKn(kn), mLp(lp)
 	{
 	}
 
@@ -22,22 +22,22 @@ class Money
 	{
 	}
 
-	void SetKn(const int kn)
+	void SetKn(const double kn)
 	{
 		mKn = kn;
 	}
 
-	void SetLp(const int lp)
+	void SetLp(const double lp)
 	{
 		mLp = lp;
 	}
 
-	int GetKn() const
+	double GetKn() const
 	{
 		return mKn;
 	};
 
-	int GetLp() const
+	double GetLp() const
 	{
 		return mLp;
 	}
@@ -47,10 +47,13 @@ class Money
 	Money operator-(const Money& article) const;
 	Money operator+(const Money& article) const;
 
+	operator double() const;
+
 	friend std::ostream& operator<<(std::ostream& consoleOut, const Money& money);
  private:
-	int mKn;
-	int mLp;
+	double GetPrice() const;
+	double mKn;
+	double mLp;
 };
 
 #endif //VJ7__MONEY_HPP_
